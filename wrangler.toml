@@ -1,0 +1,27 @@
+name = "shopping-bot"
+main = "./dist/index.mjs"
+
+workers_dev = true
+
+compatibility_date = "2022-10-01"
+compatibility_flags = []
+
+kv_namespaces = [
+  { binding = "lists", id = "a75a8c15a0df4fea8b1e11552dcf0035" },
+  { binding = "items", id = "2177d1221e4e45b9b319dbec455114f5" }
+]
+
+[build]
+command = "node scripts/build.js production"
+
+[env.development.build]
+command = "node scripts/build.js development"
+[env.development.build.upload] # Required by Miniflare
+format = "modules"
+main = "./index.mjs"
+
+[miniflare]
+kv_persist = true
+cache_persist = true
+durable_objects_persist = true
+global_async_io = true # Required by Slshx
