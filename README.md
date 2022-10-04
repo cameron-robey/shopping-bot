@@ -6,9 +6,9 @@ A very very very simple bot to handle shopping lists
 
 **Features:**
 
-🚀 Have multiple lists
-🛍 Complete all items on a list at once
-🤷‍♀️ Tracks user contributions ot lists
+- 🚀 Supports multiple lists
+- 🛍 Complete all items on a list at once
+- 🤷‍♀️ Tracks user contributions ot lists
 
 **Commands:**
 
